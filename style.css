@@ -75,13 +75,8 @@ body {
     margin-bottom: 1em; 
 }
 .botao_secundario {
-    background-color: var(--botao-vermelho);
-    border-radius: 5px;
-    padding: 1em;
-    color: var(--branco-principal);
-    display: block;
-    text-decoration: none;
-    margin-bottom: 1em; 
+    background-color: transparent;
+    border: 2px solid var(--branco-principal)
 }
 .container__titulo {
     font-size: 28px;
