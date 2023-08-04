@@ -70,9 +70,12 @@ flex-direction: row;
     padding: 1em;
     color: var(--branco-principal);
     display: block;
+    width: 17%;
     text-decoration: none;
+    text-align: center;
 /* margem somente embaixo nos botões */
     margin-bottom: 1em; 
+    margin-top: 1em;
 }
 .botao_secundario {
     background-color: transparent;
@@ -208,6 +211,11 @@ flex-direction: row;
 .celular {
     display: none;
 }
+.container__youtube{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 /* Responsividade do site*/
 @media screen and (max-width:780px){
 
@@ -265,8 +273,8 @@ flex-direction: row;
     }
 .infografico__lista img {
     margin: 1em;
-    max-width: 942px;
-    max-height: 200px;
+    max-width: 90%;
+    max-height: 90%;
     width: auto;
     height: auto;
 }
@@ -320,5 +328,12 @@ flex-direction: row;
     max-height: 100%;
     width: auto;
     height: auto;
+}
+.container__botao{
+    width: 30%;
+    text-align: center;
+}
+.container__youtube{
+    display: none;
 }
 }
