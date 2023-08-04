@@ -3,7 +3,7 @@
     --cinza-secundario: #909090;
     --cinza-rodape: #444444;
     --verde-titulo: #123F29;
-    --botao-azul: #22AA76;
+    --botao-verde-claro: #22AA76;
     --botao-verde: #0C5210;
     --cor-de-fundo: #fbfbfb;
     --fonte-principal: 'Inter';
@@ -61,12 +61,12 @@ body {
 }
 .container {
     height: 100vh;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+flex-direction: row;
 }
 .container__botao {
     background-color: var(--botao-verde);
-    border-radius: 5px;
+    border-radius: 30px;
     padding: 1em;
     color: var(--branco-principal);
     display: block;
@@ -92,13 +92,13 @@ body {
 }
 
 .secundario__image{
-    width: 100%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
 }
 
 .secundario{
     align-items: center;
-    margin: 0 10em;
+    margin: 0 2em;
 }
 
 .descricao__titulo{
@@ -196,7 +196,7 @@ body {
 }
 /*Efeitos links  pseudo classe*/
 .lista__link a:hover{
-    color: var(--botao-azul);
+    color: var(--botao-verde-claro);
 }
 .lista__link a:active{
     color: paleturquoise;
@@ -210,21 +210,46 @@ body {
 }
 /* Responsividade do site*/
 @media screen and (max-width:780px){
-.container{
+
+.banner{
+    width: 80%;
+}
+.banner video{
+    position:absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 60%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+    .container{
     display: block;
     background-image: none;
+    }
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
     }
 .container__imagem{
     width:50vw;
     display: inline-block;
     }
+    .banner .content h1 {
+        margin-top: 25px;
+    }
 .secundario{
-    margin: 100px 10px;
+    margin: 510px 10px;
     text-align: center;
     }
 .secundario__image{
-    width: 80vw;
-    height: 60vw;
+    width: 100%;
+    height: 54vw;
     }
 .ultima{
     margin-top: 100px;
@@ -238,6 +263,13 @@ body {
 .infografico__lista{
     display: block;
     }
+.infografico__lista img {
+    margin: 1em;
+    max-width: 942px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}
 .rodape__lista{
     display: block;
     }
@@ -281,5 +313,12 @@ body {
     display: block;
     text-decoration: none;
     margin-bottom: 1em; 
+}
+.infografico__lista img {
+    margin: 1em;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }
 }
